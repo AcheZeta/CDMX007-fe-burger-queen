@@ -1,131 +1,132 @@
-[{
-    "id": 1,
-    "item": "Café americano",
-    "price": 5,
-    "schedule": "breakfast",
-    "type": "drink",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/633/633652.svg"
+[
+  {
+      "id": 1,
+      "item": "Café americano",
+      "price": 5,
+      "schedule": "breakfast",
+      "type": "drink",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/633/633652.svg"
   },
   {
-    "id": 2,
-    "item": "Café con leche",
-    "price": 7,
-    "schedule": "breakfast",
-    "type": "drink",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/112/112428.svg"
+      "id": 2,
+      "item": "Café con leche",
+      "price": 7,
+      "schedule": "breakfast",
+      "type": "drink",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/112/112428.svg"
   },
   {
-    "id": 3,
-    "item": "Sandwich de jamón y queso",
-    "price": 10,
-    "schedule": "breakfast",
-    "type": "hamburger",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/1720/1720460.svg"
+      "id": 3,
+      "item": "Sandwich de jamón y queso",
+      "price": 10,
+      "schedule": "breakfast",
+      "type": "hamburger",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/1720/1720460.svg"
   },
   {
-    "id": 4,
-    "item": "Hamburguesa simple",
-    "price": 10,
-    "schedule": "meal",
-    "type": "hamburger",
-    "option": true,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/883/883806.svg"
+      "id": 4,
+      "item": "Hamburguesa simple",
+      "price": 10,
+      "schedule": "meal",
+      "type": "hamburger",
+      "option": true,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/883/883806.svg"
   },
   {
-    "id": 5,
-    "item": "Hamburguesa doble",
-    "price": 15,
-    "schedule": "meal",
-    "type": "hamburger",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/883/883806.svg"
+      "id": 5,
+      "item": "Hamburguesa doble",
+      "price": 15,
+      "schedule": "meal",
+      "type": "hamburger",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/883/883806.svg"
   },
   {
-    "id": 6,
-    "item": "Papas fritas",
-    "price": 5,
-    "schedule": "meal",
-    "type": "complements",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/1652/1652383.svg"
+      "id": 6,
+      "item": "Papas fritas",
+      "price": 5,
+      "schedule": "meal",
+      "type": "complements",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/1652/1652383.svg"
   },
   {
-    "id": 7,
-    "item": "Aros de cebolla",
-    "price": 5,
-    "schedule": "meal",
-    "type": "complements",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/790/790745.svg"
+      "id": 7,
+      "item": "Aros de cebolla",
+      "price": 5,
+      "schedule": "meal",
+      "type": "complements",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/790/790745.svg"
   },
   {
-    "id": 8,
-    "item": "Agua 500ml",
-    "price": 5,
-    "schedule": "meal",
-    "type": "drink",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/590/590972.svg"
+      "id": 8,
+      "item": "Agua 500ml",
+      "price": 5,
+      "schedule": "meal",
+      "type": "drink",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/590/590972.svg"
   },
   {
-    "id": 9,
-    "item": "Agua 750ml",
-    "price": 7,
-    "schedule": "meal",
-    "type": "drink",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/590/590972.svg"
+      "id": 9,
+      "item": "Agua 750ml",
+      "price": 7,
+      "schedule": "meal",
+      "type": "drink",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/590/590972.svg"
   },
   {
-    "id": 10,
-    "item": "Refresco 500ml",
-    "price": 7,
-    "schedule": "meal",
-    "type": "drink",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/723/723462.svg"
+      "id": 10,
+      "item": "Refresco 500ml",
+      "price": 7,
+      "schedule": "meal",
+      "type": "drink",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/723/723462.svg"
   },
   {
-    "id": 11,
-    "item": "Refresco 750ml",
-    "price": 10,
-    "schedule": "meal",
-    "type": "drink",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/824/824188.svg"
+      "id": 11,
+      "item": "Refresco 750ml",
+      "price": 10,
+      "schedule": "meal",
+      "type": "drink",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/824/824188.svg"
   },
   {
-    "id": 12,
-    "item": "extra queso",
-    "price": 1,cache
-    "schedule": "meal",cache
-    "type": "extra",cache
-    "option": false,cache
-    "selected": false,cache
-    "img": "https://image.flaticon.com/icons/cachesvg/1652/1652350.svg"
+      "id": 12,
+      "item": "extra queso",
+      "price": 1,
+      "schedule": "meal",
+      "type": "extra",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/1652/1652350.svg"
   },
   {
-    "id": 13,
-    "item": "extra huevo",
-    "price": 1,
-    "schedule": "meal",
-    "type": "extra",
-    "option": false,
-    "selected": false,
-    "img": "https://image.flaticon.com/icons/svg/135/135398.svg"
+      "id": 13,
+      "item": "extra huevo",
+      "price": 1,
+      "schedule": "meal",
+      "type": "extra",
+      "option": false,
+      "selected": false,
+      "img": "https://image.flaticon.com/icons/svg/135/135398.svg"
   }
 ]
