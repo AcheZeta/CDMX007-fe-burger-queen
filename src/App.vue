@@ -1,21 +1,22 @@
 <template>
     <div id="app">
         <main>
+  
             <img src="./assets/burgerQueenLogo.png" alt="Vue.js PWA">
             <br>
             <router-view></router-view>
             <div class="name-counter">
                 <div class="form-group">
-                    <input type="text" placeholder="¿Cómo te llamas?" v-model="namecounter.name" class="form-control">
+                    <input aria-label="nombre" type="text" placeholder="¿Cómo te llamas?" v-model="namecounter.name" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="number" placeholder="Precio" v-model="namecounter.price" class="form-control">
+                    <input aria-label="Cantidad" type="number" placeholder="Precio" v-model="namecounter.price" class="form-control">
                 </div>
                 <div class="form-group">
-                    <button @click="add">¿Cuántas hamburguesas quieres?</button>
+                    <button aria-label="Conteo" @click="add">¿Cuántas hamburguesas quieres?</button>
                 </div>
                 <div class="form-group">
-                    <button @click="saveData" class="btn btn-primary">Confirmar</button>
+                    <button aria-label="Guardar Datos" @click="saveData" class="btn btn-primary">Confirmar</button>
                 </div>
                 <p> Hola {{ namecounter.name }}, quieres {{ namecounter.counter }} hamburguesas de ${{ namecounter.price }}.</p>
             </div>
@@ -78,8 +79,7 @@ header {
     margin: 0;
     height: 56px;
     padding: 0 16px 0 24px;
-    background-color: #35495E;
-    color: #ffffff;
+    background-color: #ffffff;
 }
 
 header span {
@@ -92,4 +92,17 @@ header span {
     box-sizing: border-box;
     padding-top: 16px;
 }
+
+.menu {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  width: 20%;
+}
+
+.menu:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
 </style>
