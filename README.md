@@ -1,5 +1,26 @@
 # Burger Queen
 
+<<<<<<< HEAD
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
 ## Preámbulo
 
 [React](https://reactjs.org/), [Angular](https://angular.io/) y [Vue](https://vuejs.org/)
@@ -414,3 +435,4 @@ cd burger-queen
 ### Cloud functions
 
 - [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
+>>>>>>> bdd7781e33d6478f25f578f760912bf1d19a55e6
