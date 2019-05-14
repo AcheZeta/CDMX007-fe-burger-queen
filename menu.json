@@ -4,6 +4,8 @@
     "price": 5,
     "schedule": "breakfast",
     "type": "drink",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/633/633652.svg"
   },
   {
@@ -12,6 +14,8 @@
     "price": 7,
     "schedule": "breakfast",
     "type": "drink",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/112/112428.svg"
   },
   {
@@ -20,6 +24,8 @@
     "price": 10,
     "schedule": "breakfast",
     "type": "hamburger",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/1720/1720460.svg"
   },
   {
@@ -28,6 +34,8 @@
     "price": 10,
     "schedule": "meal",
     "type": "hamburger",
+    "option": true,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/883/883806.svg"
   },
   {
@@ -36,6 +44,8 @@
     "price": 15,
     "schedule": "meal",
     "type": "hamburger",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/883/883806.svg"
   },
   {
@@ -43,7 +53,9 @@
     "item": "Papas fritas",
     "price": 5,
     "schedule": "meal",
-    "type": "sides",
+    "type": "complements",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/1652/1652383.svg"
   },
   {
@@ -51,7 +63,9 @@
     "item": "Aros de cebolla",
     "price": 5,
     "schedule": "meal",
-    "type": "sides",
+    "type": "complements",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/790/790745.svg"
   },
   {
@@ -60,6 +74,8 @@
     "price": 5,
     "schedule": "meal",
     "type": "drink",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/590/590972.svg"
   },
   {
@@ -68,6 +84,8 @@
     "price": 7,
     "schedule": "meal",
     "type": "drink",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/590/590972.svg"
   },
   {
@@ -76,6 +94,8 @@
     "price": 7,
     "schedule": "meal",
     "type": "drink",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/723/723462.svg"
   },
   {
@@ -84,15 +104,19 @@
     "price": 10,
     "schedule": "meal",
     "type": "drink",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/824/824188.svg"
   },
   {
     "id": 12,
     "item": "extra queso",
-    "price": 1,
-    "schedule": "meal",
-    "type": "extra",
-    "img": "https://image.flaticon.com/icons/svg/1652/1652350.svg"
+    "price": 1,cache
+    "schedule": "meal",cache
+    "type": "extra",cache
+    "option": false,cache
+    "selected": false,cache
+    "img": "https://image.flaticon.com/icons/cachesvg/1652/1652350.svg"
   },
   {
     "id": 13,
@@ -100,6 +124,8 @@
     "price": 1,
     "schedule": "meal",
     "type": "extra",
+    "option": false,
+    "selected": false,
     "img": "https://image.flaticon.com/icons/svg/135/135398.svg"
   }
 ]
