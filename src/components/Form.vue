@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="container">
         <img src="../assets/burgerQueenLogo.png" alt="Vue.js PWA">
         <br>
         <div class="name-counter">
@@ -10,7 +10,7 @@
                 <input aria-label="Cantidad" type="number" placeholder="Precio" v-model="namecounter.price" class="form-control">
             </div>
             <div class="form-group">
-                <button aria-label="Conteo" @click="add">¿Cuántas hamburguesas quieres?</button>
+                <button aria-label="Conteo" class="btn waves-effect waves-light" @click="add">¿Cuántas hamburguesas quieres?</button>
             </div>
             <div class="form-group">
                 <button aria-label="Guardar Datos" @click="saveData" class="btn btn-primary">Confirmar</button>
