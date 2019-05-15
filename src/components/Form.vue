@@ -1,22 +1,16 @@
 <template>
     <main class="container">
-        <img src="../assets/burgerQueenLogo.png" alt="Vue.js PWA">
-        <br>
-        <div class="name-counter">
-            <div class="form-group">
-                <input aria-label="nombre" type="text" placeholder="¿Cómo te llamas?" v-model="namecounter.name" class="form-control">
-            </div>
-            <div class="form-group">
-                <input aria-label="Cantidad" type="number" placeholder="Precio" v-model="namecounter.price" class="form-control">
-            </div>
-            <div class="form-group">
-                <button aria-label="Conteo" class="btn waves-effect waves-light" @click="add">¿Cuántas hamburguesas quieres?</button>
-            </div>
-            <div class="form-group">
-                <button aria-label="Guardar Datos" @click="saveData" class="btn btn-primary">Confirmar</button>
-            </div>
-            <p> Hola {{ namecounter.name }}, quieres {{ namecounter.counter }} hamburguesas de ${{ namecounter.price }}.</p>
+        <div class="form-group">
+            <button aria-label="sandwich" class="btn waves-effect waves-light green lighten-1" @click="add"> sandwich </button>
+            <button aria-label="complemento" class="btn waves-effect waves-light green lighten-1" @click="less"> complemento 1 </button>
+            <button aria-label="complemento" class="btn waves-effect waves-light green lighten-1" @click="less"> complemento 2 </button>
         </div>
+        <div class="form-group">
+            <button aria-label="Guardar Datos" @click="saveData" class="btn btn-primary green lighten-1">Confirmar</button>
+        </div>
+        <p> Orden: {{ namecounter.counter }} sandwich {{ complementCounter.counter }} complemento.</p>
+        </div>
+    
     </main>
 </template>
 
@@ -30,12 +24,18 @@ export default {
                 counter: 0,
                 name: null,
                 price: null,
+            },
+            complementCounter: {
+                counter: 10,
             }
         };
     },
     methods: {
         add() {
             this.namecounter.counter += 1;
+        },
+        less() {
+            this.complementCounter.counter -= 1;
         },
         saveData() {
             db.collection("namecounter").add(this.namecounter)
