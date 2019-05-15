@@ -1,19 +1,36 @@
 <template>
     <div id="app">
         <nav-component/>
-        <form-component/>
         <router-view/>
     </div>
 </template>
 
 <script>
 import NavComponent from '@/components/Nav'
-import FormComponent from '@/components/Form'
+
+
 export default {
     name: 'app',
+    data() {
+        return {
+            id: []
+        }
+    },
+    methods: {
+        fetchArticles: function() {
+            axios.get('https://raw.githubusercontent.com/AcheZeta/CDMX007-fe-burger-queen/master/menu.json').then((response) => {
+                this.id = response.data
+            }, (error) => {
+                console.log(error)
+            })
+        }
+    },
+    mounted: function() {
+        this.fetchArticles()
+    },
     components: {
         NavComponent,
-        FormComponent
+        
     },
 };
 </script>

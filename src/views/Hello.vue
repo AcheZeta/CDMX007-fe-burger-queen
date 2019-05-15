@@ -1,15 +1,21 @@
 <template>
   <div class="hello">
+    <h5>{{ msg }}</h5>
+    <prueba/>
   </div>
 </template>
 
 <script>
+import Prueba from '@/components/Prueba'
 export default {
   name: 'hello',
   data () {
     return {
       msg: 'Burger Queen'
     }
+  },
+  components:{
+    Prueba
   }
 }
 </script>
