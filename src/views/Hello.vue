@@ -1,9 +1,11 @@
 <template>
     <div class="hello">
-        <h5>{{ msg }}</h5>
-        <prueba/>
+        <h5>Menú</h5>
+        <div v-for="item in msg" class="item">
+        {{ item.item }} ${{ item.price }}
+        </div>
     </div>
-</template>
+</template>div
 
 <script>
 import Prueba from '@/components/Prueba'
@@ -12,17 +14,14 @@ export default {
     name: 'hello',
     data() {
         return {
-            msg: 'Burger Queen'
+            msg: null
         }
     },
-    methods: {
-        async getData() {
-            let data = await axios.get('https://raw.githubusercontent.com/AcheZeta/CDMX007-fe-burger-queen/master/menu.json')
-            console.log(data);
-        }
-    },
-    created() {
-        this.getData()
+    mounted() {
+        axios
+            .get('https://raw.githubusercontent.com/AcheZeta/CDMX007-fe-burger-queen/master/menu.json')
+            .then(response => (this.msg = response.data))
+            .catch(error => console.log(error))
     }
 };
 components: {
