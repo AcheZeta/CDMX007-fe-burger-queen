@@ -1,3 +1,3 @@
 <template>
-    <h6>hola</h6>
+    <h6>Prueba</h6>
 </template>
