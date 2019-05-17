@@ -1,6 +1,8 @@
 <template>
-    <div class="hello">
+    <div class="container hello">
         <h5>componente de home</h5>
+        <figure>
+        </figure>
     <prueba/>
 
         <form-component/>
@@ -17,9 +19,6 @@ export default {
         FormComponent,
         Prueba
     }
-
 }
 </script>
 
-jonh1204@hotmail.com
-laboratoria12

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
-import Hello from '@/views/Hello'
+import Menu from '@/views/Menu'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
  
@@ -17,9 +17,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/hello',
-      name: 'Hello',
-      component: Hello
+      path: '/menu',
+      name: 'Menu',
+      component: Menu
     }
   ]
 })
