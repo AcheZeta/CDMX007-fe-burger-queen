@@ -51,11 +51,18 @@ export default {
         };
     },
     methods: {
+        readData() {
+            db.collection("menu").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    this.itemMenu.push(doc.data())
+                });
+            });
+        },
         saveMenu() {
             db.collection("menu").add(this.menu)
                 .then((docRef) => {
                     console.log("Document written with ID: ", docRef.id);
-                    this.reset()
+                    this.readData()
                 })
                 .catch(function(error) {
                     console.error("Error adding document: ", error);
@@ -66,11 +73,7 @@ export default {
         },
     },
     created() {
-        db.collection("menu").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                this.itemMenu.push(doc.data())
-            });
-        });
+        this.readData()
     },
     components: {
         Prueba

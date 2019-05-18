@@ -3,7 +3,7 @@
         <h5>componente de home</h5>
         <figure>
         </figure>
-    <prueba/>
+    <Desayuno/>
 
         <form-component/>
     </div>
