@@ -16,21 +16,9 @@ export default {
             id: []
         }
     },
-    methods: {
-        fetchArticles: function() {
-            axios.get('https://raw.githubusercontent.com/AcheZeta/CDMX007-fe-burger-queen/master/menu.json').then((response) => {
-                this.id = response.data
-            }, (error) => {
-                console.log(error)
-            })
-        }
-    },
-    mounted: function() {
-        this.fetchArticles()
-    },
     components: {
         NavComponent,
-        
+
     },
 };
 </script>
