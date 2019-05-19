@@ -33,7 +33,7 @@ export default {
             });
         },
         addItem() {
-
+            
         },
         saveTicket() {
             db.collection("ticket").add(this.ticket)
