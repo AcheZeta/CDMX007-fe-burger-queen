@@ -1,11 +1,22 @@
 <template>
     <div class="container menuComponent">
-        <h5>Desayuno</h5>
+        <h5>Menú</h5>
         <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
-        <button v-for="product in itemMenu" v-bind:key="product.id" class="btn waves-effect waves-light green lighten-1" @click="addItem"> {{ product.item }} ${{ product.price }} </button>
+        <div v-for="product in itemMenu">
+            <button class="btn waves-effect waves-light green lighten-1" @click="addItem(product.item, product.price)"> {{ product.item }} ${{ product.price }} </button>
+        </div>
         </br>
         <button aria-label="Save" @click="saveTicket" class="btn green lighten-1">Confirmar</button>
-        <div>{{ ticket }}</div>
+    
+        <div v-model="ticket">
+            <b>Cliente:</b> {{ ticket.clientName }}
+            </br> <b>Cantidad:</b> {{ ticket.productSelecc }}
+            </br> <b>Item seleccionados:</b> {{ ticket.itemSelecc }}
+            </br> <b>Total:</b> {{ ticket.totalPrice }}
+        </div>
+    
+    
+    
     </div>
 </template>
 
@@ -20,7 +31,10 @@ export default {
             itemMenu: [],
             ticket: {
                 clientName: null,
-                itemData: []
+                productSelecc: 0,
+                itemSelecc: '',
+                idButton: '',
+                totalPrice: 0,
             },
         };
     },
@@ -32,8 +46,11 @@ export default {
                 });
             });
         },
-        addItem() {
-            
+        addItem(product, price) {
+            console.log(product, price)
+            this.ticket.itemSelecc += " - " + product
+            this.ticket.productSelecc++
+            this.ticket.totalPrice += parseInt(price) 
         },
         saveTicket() {
             db.collection("ticket").add(this.ticket)

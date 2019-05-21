@@ -1,57 +1,92 @@
 <template>
-    <main class="container">
-        <div class="form-group">
-            <input aria-label="nombre" type="text" placeholder="¿Cómo te llamas?" v-model="namecounter.name" class="form-control">
-            <button aria-label="sandwich" class="btn waves-effect waves-light green lighten-1" @click="add"> sandwich </button>
-            <button aria-label="complemento" class="btn waves-effect waves-light green lighten-1" @click="less"> complemento 1 </button>
-            <button aria-label="complemento" class="btn waves-effect waves-light green lighten-1" @click="less2"> complemento 2 </button>
+    <div class="container menuComponent">
+        <h5>Desayuno</h5>
+        <div>
+            <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
+            <button v-for="product in itemMenu" :value="product.item" v-model="ticket" class="btn waves-effect waves-light green lighten-1" @click="addItem"> {{ product.name }} ${{ product.price }} </button>
+            </br>
+            <button aria-label="Save" @click="saveTicket" class="btn green lighten-1">Confirmar</button>
+    
+            <div v-model="ticket">
+                <b>Cliente:</b> {{ ticket.clientName }}
+                </br>
+                <b>Productos seleccionados:</b> {{ ticket.productSelecc }}
+            </div>
         </div>
-        <div class="form-group">
-            <button aria-label="Guardar Datos" @click="saveData" class="btn btn-primary green lighten-1">Confirmar</button>
-        </div>
-        <p><b>Orden:</b><br>{{ namecounter.counter }} sandwich. <br> Jitomate: {{ namecounter.counter1 }} <br> Lechuga: {{ namecounter.counter2 }}</p>
-        </div>
-    </main>
+    </div>
 </template>
 
 <script>
 import { fb, db } from '../../firebase'
+import Prueba from '@/components/Prueba'
+
 export default {
-    name: 'form.vue',
+    name: 'menuComponent',
     data() {
         return {
-            namecounter: {
-                counter: 0,
-                name: null,
-                price: null,
-                counter1: 10,
-                counter2: 2,
-            },
+            itemMenu: [],
+            ticket: {
+                clientName: "",
+                productSelecc: 0,
+                itemSelecc: "",
+                time: "",
+            }
         };
     },
     methods: {
-        add() {
-            this.namecounter.counter += 1;
+        readData() {
+            db.collection("desayuno").get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    this.itemMenu.push(doc.data())
+                });
+            });
         },
-        less() {
-            this.namecounter.counter1 -= 1;
+        addItem() {
+            this.ticket.productSelecc += 1;
+            
         },
-        less2() {
-            this.namecounter.counter2 -= 1;
-        },
-        saveData() {
-            db.collection("namecounter").add(this.namecounter)
+        saveTicket() {
+            db.collection("ticket").add(this.ticket)
                 .then((docRef) => {
                     console.log("Document written with ID: ", docRef.id);
-                    this.reset()
+                    this.readData()
                 })
                 .catch(function(error) {
                     console.error("Error adding document: ", error);
                 });
+            
         },
         reset() {
             Object.assign(this.$data, this.$options.data.apply(this));
         },
     },
-};
+    mounted() {
+        this.readData()
+    },
+    components: {
+        Prueba
+    },
+}
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+h1,
+h2 {
+    font-weight: normal;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    color: #35495E;
+}
+</style>

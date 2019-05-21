@@ -1,10 +1,9 @@
 <template>
     <div class="container hello">
-        <h5>componente de home</h5>
+        <h5>Menú</h5>
         <figure>
         </figure>
-    <Desayuno/>
-
+    
         <form-component/>
     </div>
 </template>

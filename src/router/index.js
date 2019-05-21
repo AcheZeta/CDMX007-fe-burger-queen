@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
 import Menu from '@/views/Menu'
+import Ticket from '@/views/Ticket'
 import Prueba from '@/views/Prueba'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -26,6 +27,11 @@ export default new Router({
       path: '/prueba',
       name: 'Prueba',
       component: Prueba
+    },
+    {
+      path: '/ticket',
+      name: 'Ticket',
+      component: Ticket
     }
   ]
 })
