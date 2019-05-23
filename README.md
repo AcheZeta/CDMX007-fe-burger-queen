@@ -1,56 +1,24 @@
 # Burger Queen
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-## Preámbulo
-
+## Frameworks 
 [React](https://reactjs.org/), [Angular](https://angular.io/) y [Vue](https://vuejs.org/)
 son algunos de los _frameworks_ y _librerías_ de JavaScript más utilizados por
-lxs desarrolladorxs alrededor del mundo, y hay una razón para eso.
-En el contexto del navegador, [_mantener la interfaz sincronizada con el estado
-es difícil_](https://medium.com/dailyjs/the-deepest-reason-why-modern-javascript-frameworks-exist-933b86ebc445).
-Al elegir un _framework_ o _librería_ para nuestra interfaz, nos apoyamos en una
-serie de convenciones e implementaciones _probadas_ y _documentadas_ para
-resolver un problema común a toda interfaz web. Esto nos permite concentrarnos
-mejor (dedicar más tiempo) en las caractrísticas _específicas_ de
-nuestra aplicación.
+lxs desarrolladorxs alrededor del mundo.
 
-Cuando elegimos una de estas tecnologías no solo importamos un pedacito de
-código para reusarlo (lo cuál es un gran valor per se), si no que adoptamos una
-**arquitectura**, una serie de **principios de diseño**, un **paradigma**, unas
-**abstracciones**, un **vocabulario**, una **comunidad**, etc...
+**Burger Queen** es el primer proyecto donde usamos framework en el bootcamp, es un primer acercamiento y representa también una nueva curva de aprendizaje, para este proyecto elegí [Vue](https://vuejs.org/), un framework progresivo para construir interfaces de usuario, diseñado desde el inicio para ser adoptado incrementalmente. La biblioteca principal se enfoca solo en la capa de la vista, y es muy simple de utilizar e integrar con otros proyectos o bibliotecas existentes. Por otro lado, Vue también es perfectamente capaz de soportar aplicaciones sofisticadas de una sola página (Single-page-application o SPA) cuando se utiliza en combinación con herramientas modernas y librerías compatibles. [Conocer más de Vue](https://es-vuejs.github.io/vuejs.org/v2/guide/). 
 
-Como desarrolladora Front-end, estos kits de desarrollo pueden resultarte
-de gran ayuda para implementar rápidamente características de los proyectos en
-los que trabajes.
-
-## Resumen del proyecto
-
-Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes)
-hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos
-en los que primero hay que asegurarse de cumplir con lo requerido.
+## Sobre el proyecto
 
 Un pequeño restaurante de hamburguesas, que está creciendo, necesita una
 interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos
 a la cocina para que se preparen ordenada y eficientemente (a través de un
 _backend_ del que nos darán detalles más adelante).
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+Basados en la investigación y diseño de [Andrea Parrilla](https://github.com/Andrea0611/UX_BurgerQueen).
+
+[Prototipo](https://marvelapp.com/1ee00d4g/screen/55755773)
+
+![burger-queen]()
 
 Esta es la información que tenemos del cliente:
 
@@ -97,337 +65,67 @@ con todos sus _productos_. El usuario debe poder ir eligiendo qué _productos_
 agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
 
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
+## Conoce más:
 
-## Objetivos de aprendizaje
+_Conoce todas las consideraciones y objetivos del proyecto en el readme original_
+[ReadMe](https://github.com/Laboratoria/CDMX007-fe-burger-queen/blob/master/README.md)
 
-1. El objetivo principal de es aprender a construir una _interfaz web_ usando
-   el _framework_ elegido (React, Angular o Vue). Todos estos frameworks de
-   Front-end atacan el mismo problema: **cómo mantener la interfaz y el estado
-   sincronizados**. Así que esta experiencia espera familiarizarte con el concepto
-   de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
-   ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_
-   a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
+## Comenzando 🚀
 
-2. Como objetivo secundario, deberás seguir las recomendaciones para PWAs
-   (_Progressive Web Apps_), lo cual incluye conceptos como **offline**. Para
-   guiarte con respecto a este tema te recomendamos usar [Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=es),
-   que es una herramienta de Google que nos ayuda a asegurar que nuestras web apps
-   sigan "buenas prácticas". De hecho, usaremos Lighthouse a la hora de evaluar el
-   proyecto.
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-3. Finalmente, la interfaz debe estar diseñada específicamente para correr en
-   **tablets**.
+Mira **Deployment** para conocer como desplegar el proyecto.
 
-Tópicos: _react_, _angular_,_vue_, _pwa_, _offline-first_, _service-worker_.
 
-## Consideraciones
+### Pre-requisitos 📋
 
-Este proyecto se debe "resolver" de forma individual.
+Antes que nada, asegúrate de tener un  editor de texto en condiciones, yo usé Visual Studio.
+Para ejecutar los comandos a continuación necesitarás una  UNIX Shell, que interpreta líneas de comando (command-line interpreter) así como tener git instalado. Si usas un sistema operativo "UNIX-like", como GNU/Linux o MacOS, ya tienes una shell (terminal) instalada por defecto (y probablemente git también). Si usas Windows puedes usar Git bash, aunque recomendaría que consideres probar  GNU/Linux como tu Sistema Operativo.
 
-Trabaja en una historia de usuario hasta terminarla antes de pasar a la siguiente. Trabaja
-hasta la historia que puedas en el tiempo especificado.
+### Instalación 🔧
 
-La lógica del proyecto debe estar implementada completamente en JavaScript
-(ES6+), HTML y CSS y empaquetada de manera automatizada.
-En este proyecto Sí está permitido usar librerías o frameworks
-(debes elegir entre [React](https://reactjs.org/),
-[Angular](https://angular.io/) o [Vue](https://vuejs.org/)).
+Una vez con el proyecto realiza la instalación de las dependencias y el proyecto.
 
-La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-_tablet_, pero **no queremos una app nativa**, sino una web app que sea
-**responsive** y pueda funcionar **offline**.
+``` bash
+# install dependencies
+npm install
 
-Necesitamos pensar bien en el aspecto UX de de quienes van a tomar los pedidos,
-el tamaño y aspecto de los botones, la visibilidad del estado actual del
-pedido, etc.
+# serve with hot reload at localhost:8080
+npm run dev
 
-La aplicación desplegada debe tener 80% o más el las puntuaciones de
-Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
+# build for production with minification
+npm run build
 
-La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-`test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-empaquetar y desplegar la aplicación respectivamente.
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_,
-_lines_ y _branches_.
-
-Este proyecto incluye un _boilerplate_ con el código necesario para arrancar con
-la parte de backend ya resuelta. El _boilerplate_ incluye los siguientes
-archivos/carpetas con la configuración de Fierbase (hosting, firestore y
-functions):
-
-```text
-./04-burger-queen/
-├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
-├── functions
-│   ├── index.js
-│   ├── package.json
-└── README.md
-
+# build for production and view the bundle analyzer report
+npm run build --report
 ```
 
-Para este proyecto trabajarás de la mano de una UX designer. Parte de la
-interfaz ha sido propuesta y has escogido una de las propuestas para
-desarrollarla.
 
-Por otro lado, la parte de la interfaz no está incluida, por lo que, deberás
-definir la estructura de carpetas y archivos que consideres necesaria. Puedes
-guiarte de las convenciones del _framework_ elegido. Por ende, los _tests_ y el
-_setup_ necesario para ejecutarlos, serán hechos por ti.
+## Ejecutando las pruebas ⚙️
 
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio.
+Los tests desarrollados para este proyecto aún están en construcción.
+Serán subidos al proyecto en cuento esten listos. 
 
-## Criterios de aceptación del proyecto
+## Deployment 📦
 
-### Definición del producto
+Para alojar el proyecto utilicé Firebase con el comando
 
-El [_Product Owner_](https://www.youtube.com/watch?v=r2hU7MVIzxs&t=202s) nos presenta este _backlog_ que es el resultado de su trabajo con el cliente hasta hoy.
-
----
-
-#### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente
-
-Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala
-memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
-que se puedan ir preparando en orden.
-
-##### Criterios de aceptación
-
-Lo que debe ocurrir para que se satisfagan las necesidades del usuario)
-
-- Anotar nombre de cliente.
-- Agregar productos al pedido.
-- Eliminar productos.
-- Ver resumen y el total de la compra.
-- Enviar pedido a cocina (guardar en alguna base de datos).
-- Se ve y funciona bien en una _tablet_
-
-##### Definición de terminado
-
-Lo acordado que debe ocurrir para decir que la historia está terminada.
-
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
----
-
-#### [Historia de usuario 2] Jefe de cocina debe ver los pedidos
-
-Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y
-marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs
-que un pedido está listo para servirlo a un cliente.
-
-##### Criterios de aceptación
-
-- Ver los pedidos ordenados según se van haciendo.
-- Marcar los pedidos que se han preparado y están listos para servirse.
-- Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
-  marcó como completado.
-
-##### Definición de terminado
-
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
----
-
-#### [Historia de usuario 3] Meserx debe ver pedidos listos para servir
-
-Yo como meserx quiero ver los pedidos que están preparados para entregarlos
-rápidamente a los clientes que las hicieron.
-
-##### Criterios de aceptación
-
-- Ver listado de pedido listos para servir.
-- Marcar pedidos que han sido entregados.
-
-##### Definición de terminado
-
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-- Los datos se deben mantener íntegros, incluso después de que un pedido ha
-  terminado. Todo esto para poder tener estadísticas en el futuro.
-
----
-
-## Habilidades involucradas en el proyecto
-
-### Blandas
-
-| Habilidad                                       |
-| ----------------------------------------------- |
-| Planificación, organización y manejo del tiempo |
-| Autoaprendizaje                                 |
-| Presentaciones                                  |
-| Adaptabilidad                                   |
-| Solución de problemas                           |
-| Trabajo en equipo                               |
-| Responsabilidad                                 |
-| Dar y recibir feedback                          |
-| Comunicación eficaz                             |
-
-### Técnicas, Front-end
-
-| Habilidad                     |
-| ----------------------------- |
-| **Computer Science**          |
-| Lógica                        |
-| Arquitectura                  |
-| **Source Control Management** |
-| Git                           |
-| GitHub                        |
-| **JavaScript**                |
-| Estilo                        |
-| Nomenclatura/semántica        |
-| Funciones/modularidad         |
-| Estructuras de datos          |
-| Tests                         |
-| **HTML**                      |
-| Validación                    |
-| Estilo                        |
-| Semántica                     |
-| **CSS**                       |
-| DRY                           |
-| Responsive                    |
-
-### Técnicas, UX
-
-| Habilidad                                         |
-| ------------------------------------------------- |
-| **Investigación (_Reseacrh_)**                    |
-| User Centricity (_Diseño Centrado en el Usuario_) |
-| **Diseño Visual (_Visual Design_)**               |
-
----
-
-## Primeros pasos
-
-1. El primer paso de este proyecto debe ser convertir el menú descrito por el
-   cliente en una estructura que podamos poner en un archivo JSON para después
-   _pintar_ en la pantalla
-
-2. Haz un _fork_ de este repo (en GitHub).
-
-3. Clona tu _fork_ en tu computadora:
-
-   ```sh
-   git clone git@github.com:<tu-usuario-de-github>/<cohortid>-burger-queen.git
-   cd <cohortid>-burger-queen
-   ```
-
-4. Crea una rama a partir de `master` para empezar a trabajar. Por ejemplo:
-
-   ```sh
-   git checkout -b develop
-   ```
-
-5. Crear proyecto en [Firebase](https://firebase.google.com/)
-
-6. Habilitar Firestore (_comenzar en modo bloqueado_) en sección de "Bases de
-   Datos" de [Firebase console](https://console.firebase.google.com/).
-
-7. Instalar utilidad de línea de comando de Firebase:
-
-   ```sh
-   npm i -g firebase-tools
-   ```
-
-8. Ahora usa el siguiente comando para acceder con tu cuenta de Google:
-
-   ```sh
-   firebase login
-   ```
-
-9. Agregamos entorno de producción para desplegar:
-
-   ```sh
-   firebase use --add
-   ```
-
-   Elige el proyecto de Firebase y un alias:
-
-![image](https://user-images.githubusercontent.com/25906896/46550922-06d6e480-c89c-11e8-8ee1-7cdbe0445884.png)
-
-10. Instalar dependencias de cloud functions:
-
-```sh
-# usando yarn
-cd functions && yarn && cd ..
-# alternativamente, usando npm
-cd functions && npm install && cd ..
-```
-
-11. Desplegar:
-
-```sh
+``` bash
+# Firebase Deploy
 firebase deploy
 ```
 
-12. Llegado a este punto ya puedes comenzar con el _front-end_ :wink:
+## Construido con 🛠️
 
----
+* [VueJS](https://vuejs.org/)
+* [Firebase](https://firebase.google.com/)
+* [Cloud Firestore](https://firebase.google.com/docs/firestore)
+* [Firebase Hosting](https://firebase.google.com/docs/hosting)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [Jest](https://jestjs.io/)
 
-Nota para estudiantes que elijan React y quieran usar `create-react-app`:
 
-Si tratas de usar `create-react-app` en el directorio del proyecto recibirás un
-error diciendo que hay archivos que podrían presentar un conflicto. Para evitar
-este problema puedes crear una nueva app usando `create-react-app` y de ahí
-_mezclarla_ con la carpeta del proyecto:
+## Contribuyendo 🖇️
 
-```sh
-# si estabase en la carpeta del proyecto, salimos a la carpeta de más arriba
-cd ..
-
-create-react-app burger-queen-tmp
-cp -r burger-queen/* burger-queen-tmp/
-cp -r burger-queen-tmp/.gitignore burger-queen-tmp/* burger-queen/
-rm -rf burger-queen-tmp
-cd burger-queen
-```
-
----
-
-**Con angular y vue, es similar**
-
-## Pistas / Tips
-
-### Frameworks / libraries
-
-- [React](https://reactjs.org/)
-- [Angular](https://angular.io/)
-- [Vue](https://vuejs.org/)
-
-### Herramientas
-
-- [npm-scripts](https://docs.npmjs.com/misc/scripts)
-- [Babel](https://babeljs.io/)
-- [webpack](https://webpack.js.org/)
-
-### PWA
-
-- [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-- [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-- [offlinefirst.org](http://offlinefirst.org/)
-- [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
-
-### Serverless
-
-- [Qué es eso de serverless? - @PamRucinque en Medium](https://medium.com/@PamRucinque/qu%C3%A9-es-eso-de-serverless-f4f6c8949b87)
-- [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
-- [Firebase](https://firebase.google.com/)
-- [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
-
-### Cloud functions
-
-- [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
+Por favor lee el [CONTRIBUTING.md](https://github.com/Laboratoria/curricula-js/blob/master/CONTRIBUTING.md) de [Laboratoria]
