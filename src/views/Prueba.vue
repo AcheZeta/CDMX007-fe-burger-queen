@@ -1,11 +1,11 @@
 <template>
-    <div class="container menuComponent">
-        <h5>Menú</h5>
+    <div class="menuComponent">
+        <h5>HOla</h5>
         <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
+    
         <div v-for="product in itemMenu">
             <button class="btn waves-effect waves-light green lighten-1" @click="addItem(product.item, product.price)"> {{ product.item }} ${{ product.price }} </button>
         </div>
-        </br>
         <button aria-label="Save" @click="saveTicket" class="btn green lighten-1">Confirmar</button>
     
         <div v-model="ticket">
@@ -42,7 +42,7 @@ export default {
         readData() {
             db.collection("menu").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    this.itemMenu.push(doc.data())
+                    this.itemMenu.push(doc.data()) 
                 });
             });
         },
@@ -50,20 +50,26 @@ export default {
             console.log(product, price)
             this.ticket.itemSelecc += " - " + product
             this.ticket.productSelecc++
-            this.ticket.totalPrice += parseInt(price) 
+                this.ticket.totalPrice += parseInt(price)
         },
         saveTicket() {
             db.collection("ticket").add(this.ticket)
                 .then((docRef) => {
                     console.log("Document written with ID: ", docRef.id);
-                    this.readData()
+                    this.reset()
                 })
                 .catch(function(error) {
                     console.error("Error adding document: ", error);
                 });
+
         },
         reset() {
-            Object.assign(this.$data, this.$options.data.apply(this));
+            //    Object.assign(this.ticket, this.$options.data.apply(this));
+            this.ticket.clientName = null;
+            this.ticket.productSelecc = 0;
+                this.ticket.itemSelecc = '';
+                this.ticket.idButton = '';
+                this.ticket.totalPrice = 0;
         },
     },
     created() {

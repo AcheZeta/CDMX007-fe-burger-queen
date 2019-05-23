@@ -6,14 +6,13 @@ import Ticket from '@/views/Ticket'
 import Prueba from '@/views/Prueba'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
- 
+
 Vue.use(VueAxios, axios)
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'Home',
       component: Home
@@ -32,6 +31,6 @@ export default new Router({
       path: '/ticket',
       name: 'Ticket',
       component: Ticket
-    }
+    },
   ]
 })

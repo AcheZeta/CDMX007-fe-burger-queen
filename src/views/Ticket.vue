@@ -17,7 +17,7 @@
                     <td> {{ product.clientName }}</td>
                     <td> {{ product.productSelecc }}</td>
                     <td> {{ product.itemSelecc }}</td>
-                    <td> {{ product.totalPrice }}</td>
+                    <td> ${{ product.totalPrice }}</td>
                 </tr>
             </tbody>
         </table>

@@ -1,21 +1,15 @@
 <template>
     <div class="container hello">
-        <h5>Menú</h5>
-        <figure>
-        </figure>
-    
-        <form-component/>
+        <Prueba/>
     </div>
 </template>
 
 
 <script>
-import FormComponent from '@/components/Form'
-import Prueba from '@/components/Prueba'
+import Prueba from '@/views/Prueba'
 
 export default {
     components: {
-        FormComponent,
         Prueba
     }
 }
