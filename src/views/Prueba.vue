@@ -1,6 +1,6 @@
 <template>
     <div class="menuComponent">
-        <h5>HOla</h5>
+        <h5>{{ schedule}}</h5>
         <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
     
         <div v-for="product in itemMenu">
@@ -12,11 +12,8 @@
             <b>Cliente:</b> {{ ticket.clientName }}
             </br> <b>Cantidad:</b> {{ ticket.productSelecc }}
             </br> <b>Item seleccionados:</b> {{ ticket.itemSelecc }}
-            </br> <b>Total:</b> {{ ticket.totalPrice }}
+            </br> <b>Total:</b> ${{ ticket.totalPrice }}
         </div>
-    
-    
-    
     </div>
 </template>
 
@@ -28,6 +25,7 @@ export default {
     name: 'menuComponent',
     data() {
         return {
+            mealType: {} ,
             itemMenu: [],
             ticket: {
                 clientName: null,
@@ -42,7 +40,8 @@ export default {
         readData() {
             db.collection("menu").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
-                    this.itemMenu.push(doc.data()) 
+                    this.itemMenu.push(doc.data())
+                    // this.itemMenu = allMenuItems.filter(item => item.schedule === this.mealType)
                 });
             });
         },
@@ -67,9 +66,9 @@ export default {
             //    Object.assign(this.ticket, this.$options.data.apply(this));
             this.ticket.clientName = null;
             this.ticket.productSelecc = 0;
-                this.ticket.itemSelecc = '';
-                this.ticket.idButton = '';
-                this.ticket.totalPrice = 0;
+            this.ticket.itemSelecc = '';
+            this.ticket.idButton = '';
+            this.ticket.totalPrice = 0;
         },
     },
     created() {

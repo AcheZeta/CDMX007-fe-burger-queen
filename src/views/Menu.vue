@@ -63,6 +63,7 @@ export default {
                 .then((docRef) => {
                     console.log("Document written with ID: ", docRef.id);
                     this.readData()
+                    reset()
                 })
                 .catch(function(error) {
                     console.error("Error adding document: ", error);

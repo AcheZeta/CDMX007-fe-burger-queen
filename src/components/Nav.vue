@@ -1,13 +1,35 @@
 <template>
     <div class="container">
         <header class="button-menu">
-            <button aria-label="Desayuno" @click="" class="menu btn green lighten-1">Desayuno</button>
-            <button aria-label="Comida" @click="" class="btn menu red lighten-1">Comida</button>
-            <button aria-label="Nuevo pedido" @click="" class="btn menu red lighten-1">Nuevo Pedido</button>
-            <button aria-label="Historial de Pedido" @click="" class="btn menu red lighten-1">Historial</button>
+            <button aria-label="Desayuno" @click="breakfastRoute" class="menu btn green lighten-1">Desayuno</button>
+            <button aria-label="Comida" @click="mealRoute" class="btn menu red lighten-1">Comida</button>
+            <button aria-label="Menú" @click="menuRoute" class="btn menu red lighten-1">Nuevo Pedido</button>
+            <button aria-label="Historial de Pedidos" @click="ticketRoute" class="btn menu red lighten-1">Historial</button>
         </header>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'menuComponent',
+
+    methods: {
+        ticketRoute() {
+            this.$router.push('/ticket')
+        },
+        menuRoute() {
+            this.$router.push('/menu')
+        },
+        mealRoute() {
+            this.$router.push('/')
+        },
+        breakfastRoute() {
+            this.$router.push('/')
+        }
+    },
+
+}
+</script>
 
 <style>
 .menu {
