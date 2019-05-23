@@ -1,19 +1,21 @@
 <template>
     <div class="menuComponent">
-        <h5>{{ schedule}}</h5>
+        <h5>Nuevo Pedido</h5>
+
         <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
-    
-        <div v-for="product in itemMenu">
-            <button class="btn waves-effect waves-light green lighten-1" @click="addItem(product.item, product.price)"> {{ product.item }} ${{ product.price }} </button>
-        </div>
-        <button aria-label="Save" @click="saveTicket" class="btn green lighten-1">Confirmar</button>
-    
         <div v-model="ticket">
             <b>Cliente:</b> {{ ticket.clientName }}
             </br> <b>Cantidad:</b> {{ ticket.productSelecc }}
             </br> <b>Item seleccionados:</b> {{ ticket.itemSelecc }}
             </br> <b>Total:</b> ${{ ticket.totalPrice }}
         </div>
+
+        <button aria-label="Save" @click="saveTicket" class="btn green">Confirmar</button>
+    
+        <div v-for="product in itemMenu">
+            <button class="btn waves-effect waves-light green lighten-1" @click="addItem(product.item, product.price)"> {{ product.item }} ${{ product.price }} </button>
+        </div>
+    
     </div>
 </template>
 
@@ -25,7 +27,7 @@ export default {
     name: 'menuComponent',
     data() {
         return {
-            mealType: {} ,
+            mealType: {},
             itemMenu: [],
             ticket: {
                 clientName: null,
