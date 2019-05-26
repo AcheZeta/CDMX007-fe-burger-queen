@@ -36,6 +36,7 @@
   <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>"
     as="<%= file.match(/\.css$/)?'style':'script' %>"><% }}} %>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -45,6 +46,18 @@
     This is your fallback content in case JavaScript fails to load.
   </noscript>
   <div id="app" class="container"></div>
+  <script>
+    // CODELAB: Register service worker.
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg);
+          });
+      });
+    }
+
+  </script>
   <!-- Todo: only include in production -->
   <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
   <!-- built files will be auto injected -->

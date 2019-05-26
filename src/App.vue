@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app ">
         <nav-component/>
         <router-view/>
     </div>
@@ -28,8 +28,12 @@ body {
     margin: 0;
 }
 
+.container {
+    background-color: #e8f5e9;
+}
+
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;

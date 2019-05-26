@@ -4,11 +4,11 @@
             <div class="col s12">
                 <h5>Nuevo Pedido</h5>
             </div>
-    
+
             <div class="col s6">
                 <div class="col s6" v-for="product in itemMenu">
                     <a class="waves-effect waves-light btn green lighten-1" @click="addItem(product.item, product.price, product.schedule)">
-                                        {{ product.item }} ${{ product.price }}</a></br>
+                                            {{ product.item }} ${{ product.price }}</a></br>
                     </br>
                 </div>
             </div>
@@ -73,7 +73,6 @@ export default {
                 .catch(function(error) {
                     console.error("Error adding document: ", error);
                 });
-
         },
         reset() {
             //    Object.assign(this.ticket, this.$options.data.apply(this));
@@ -83,6 +82,10 @@ export default {
             this.ticket.idButton = '';
             this.ticket.totalPrice = 0;
         },
+
+        toast() {
+            M.toast({ html: 'I am a toast!' })
+        }
     },
     created() {
         this.readData()
@@ -95,10 +98,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.menubtn {
-    padding: 10px;
-}
-
 h1,
 h2 {
     font-weight: normal;
