@@ -8,7 +8,7 @@
             <div class="col s6">
                 <div class="col s6" v-for="product in itemMenu">
                     <a class="waves-effect waves-light btn green lighten-1" @click="addItem(product.item, product.price, product.schedule)">
-                            {{ product.item }} ${{ product.price }}</a></br>
+                                        {{ product.item }} ${{ product.price }}</a></br>
                     </br>
                 </div>
             </div>
@@ -23,6 +23,7 @@
                         </br> <b>Total:</b> ${{ ticket.totalPrice }}
                     </div>
                     <button aria-label="Save" @click="saveTicket" class="btn green">Confirmar</button>
+                    <button aria-label="Save" @click="reset" class="btn red">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -59,7 +60,7 @@ export default {
         },
         addItem(product, price, schedule) {
             console.log(product, price, schedule)
-            this.ticket.itemSelecc += " - " + product
+            this.ticket.itemSelecc += '  ' + product
             this.ticket.productSelecc++
                 this.ticket.totalPrice += parseInt(price)
         },
