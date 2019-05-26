@@ -13,5 +13,8 @@ export default {
         Prueba
     }
 }
+// const algo = this.itemMenu.filter(item => item.schedule == 'breakfast')
+//                     return algo;
 </script>
 
+                    

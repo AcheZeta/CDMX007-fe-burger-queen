@@ -1,21 +1,31 @@
 <template>
     <div class="menuComponent">
-        <h5>Nuevo Pedido</h5>
-
-        <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
-        <div v-model="ticket">
-            <b>Cliente:</b> {{ ticket.clientName }}
-            </br> <b>Cantidad:</b> {{ ticket.productSelecc }}
-            </br> <b>Item seleccionados:</b> {{ ticket.itemSelecc }}
-            </br> <b>Total:</b> ${{ ticket.totalPrice }}
-        </div>
-
-        <button aria-label="Save" @click="saveTicket" class="btn green">Confirmar</button>
+        <div class="row">
+            <div class="col s12">
+                <h5>Nuevo Pedido</h5>
+            </div>
     
-        <div v-for="product in itemMenu">
-            <button class="btn waves-effect waves-light green lighten-1" @click="addItem(product.item, product.price)"> {{ product.item }} ${{ product.price }} </button>
-        </div>
+            <div class="col s6">
+                <div class="col s6" v-for="product in itemMenu">
+                    <a class="waves-effect waves-light btn green lighten-1" @click="addItem(product.item, product.price, product.schedule)">
+                            {{ product.item }} ${{ product.price }}</a></br>
+                    </br>
+                </div>
+            </div>
     
+            <div class="col s6">
+                <div>
+                    <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
+                    <div v-model="ticket">
+                        <b>Cliente:</b> {{ ticket.clientName }}
+                        </br> <b>Cantidad:</b> {{ ticket.productSelecc }}
+                        </br> <b>Item seleccionados:</b> {{ ticket.itemSelecc }}
+                        </br> <b>Total:</b> ${{ ticket.totalPrice }}
+                    </div>
+                    <button aria-label="Save" @click="saveTicket" class="btn green">Confirmar</button>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -27,7 +37,6 @@ export default {
     name: 'menuComponent',
     data() {
         return {
-            mealType: {},
             itemMenu: [],
             ticket: {
                 clientName: null,
@@ -43,12 +52,13 @@ export default {
             db.collection("menu").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     this.itemMenu.push(doc.data())
-                    // this.itemMenu = allMenuItems.filter(item => item.schedule === this.mealType)
+                    // const algo = this.itemMenu.filter(item => item.schedule == "meal")
+                    // return algo;
                 });
             });
         },
-        addItem(product, price) {
-            console.log(product, price)
+        addItem(product, price, schedule) {
+            console.log(product, price, schedule)
             this.ticket.itemSelecc += " - " + product
             this.ticket.productSelecc++
                 this.ticket.totalPrice += parseInt(price)
@@ -84,6 +94,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.menubtn {
+    padding: 10px;
+}
+
 h1,
 h2 {
     font-weight: normal;
