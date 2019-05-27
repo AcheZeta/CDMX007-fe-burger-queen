@@ -18,7 +18,7 @@ Basados en la investigación y diseño de [Andrea Parrilla](https://github.com/A
 
 [Prototipo](https://marvelapp.com/1ee00d4g/screen/55755773)
 
-![burger-queen]()
+![burger-queen](https://raw.githubusercontent.com/AcheZeta/CDMX007-fe-burger-queen/ramadev/src/assets/qr-code.png)
 
 Esta es la información que tenemos del cliente:
 
