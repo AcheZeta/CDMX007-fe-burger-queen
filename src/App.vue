@@ -26,14 +26,19 @@ export default {
 <style>
 body {
     margin: 0;
+    padding: 0;
 }
 
 .container {
     background-color: #e8f5e9;
 }
 
+.components {
+    padding: 4%;
+}
+
 #app {
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;

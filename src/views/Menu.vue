@@ -1,5 +1,5 @@
 <template>
-    <div class="container menuComponent">
+    <div class="container components">
         <h5>Menú</h5>
         <input aria-label="id" type="text" placeholder="id" v-model="menu.id" class="form-control">
         <input aria-label="item" type="text" placeholder="item" v-model="menu.item" class="form-control">

@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <header class="button-menu">
-            <a class="waves-effect waves-light btn red lighten-1" @click="breakfastRoute">Nuevo Pedido</a>
-            <a class="waves-effect waves-light btn green lighten-1" @click="ticketRoute">Historial</a>
-            <a class="waves-effect waves-light btn grey lighten-1" @click="menuRoute">Menú</a>
+        <header class="button-menu navSpace">
+            <a class="waves-effect waves-light btn-large black-text amber" @click="breakfastRoute">Nuevo Pedido</a>
+            <a class="waves-effect waves-light btn-large black-text lime darken-1" @click="ticketRoute">Historial</a>
+            <a class="waves-effect waves-light btn-large black-text purple accent-4" @click="menuRoute">Menú</a>
         </header>
     </div>
 </template>
@@ -31,5 +31,11 @@ export default {
 </script>
 
 <style>
+.container {
+    background-color: #e8f5e9;
+}
 
+ header {
+    margin-bottom: 2%;
+}   
 </style>

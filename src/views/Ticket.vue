@@ -1,20 +1,19 @@
 <template>
-    <div class="container ticketComponet">
-        <h5>Historial de Pedidos</h5>
-      
+    <div class="components container">
+        <h5 class="center">Historial de Pedidos</h5>
+    
         <table>
             <thead>
                 <tr>
                     <th>Cliente</th>
                     <th>Cantidad</th>
-                    <th>Items</th>
                     <th>Total</th>
-
+                    <th>Items</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="product in savedTicket" class="itemMenu">
-                    <td> {{ product.clientName }}</td>                  
+                    <td> {{ product.clientName }} </td>
                     <td> {{ product.itemSelecc }}</td>
                     <td> ${{ product.totalPrice }}</td>
                     <td> {{ product.productSelecc }}</td>
@@ -37,7 +36,7 @@ export default {
     },
     methods: {
         readData() {
-            db.collection("ticket").orderBy("totalPrice").get().then((querySnapshot) => {
+            db.collection("ticket").orderBy("timeStamp").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     this.savedTicket.push(doc.data())
                 });
@@ -58,10 +57,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-h1,
-h2 {
-    font-weight: normal;
-}
 
 ul {
     list-style-type: none;
@@ -73,7 +68,4 @@ li {
     margin: 0 10px;
 }
 
-a {
-    color: #35495E;
-}
 </style>
