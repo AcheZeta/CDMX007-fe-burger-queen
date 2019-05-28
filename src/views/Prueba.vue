@@ -59,7 +59,6 @@ export default {
             });
         },
         addItem(product, price, schedule) {
-            console.log(product, price, schedule)
             this.ticket.itemSelecc += '  ' + product
             this.ticket.productSelecc++
                 this.ticket.totalPrice += parseInt(price)
