@@ -14,10 +14,10 @@
             </thead>
             <tbody>
                 <tr v-for="product in savedTicket" class="itemMenu">
-                    <td> {{ product.clientName }}</td>
-                    <td> {{ product.productSelecc }}</td>
+                    <td> {{ product.clientName }}</td>                  
                     <td> {{ product.itemSelecc }}</td>
                     <td> ${{ product.totalPrice }}</td>
+                    <td> {{ product.productSelecc }}</td>
                 </tr>
             </tbody>
         </table>
@@ -37,7 +37,7 @@ export default {
     },
     methods: {
         readData() {
-            db.collection("ticket").get().then((querySnapshot) => {
+            db.collection("ticket").orderBy("totalPrice").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     this.savedTicket.push(doc.data())
                 });
