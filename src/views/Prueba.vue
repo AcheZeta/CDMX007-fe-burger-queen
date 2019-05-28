@@ -8,7 +8,7 @@
             <div class="col s12 m6 s6">
                 <div class="col s6" v-for="product in itemMenu">
                     <a class="waves-effect waves-light btn green lighten-1" @click="addItem(product.item, product.price, product.schedule)">
-                                                                {{ product.item }} ${{ product.price }}</a></br>
+                                                                                {{ product.item }} ${{ product.price }}</a></br>
                     </br>
                 </div>
             </div>
@@ -75,16 +75,17 @@ export default {
                 });
         },
         reset() {
-            //  Object.assign(this.ticket, this.$options.data.apply(this));
             this.ticket.clientName = null;
             this.ticket.productSelecc = 0;
             this.ticket.itemSelecc = '';
             this.ticket.totalPrice = 0;
         },
         clearTicket() {
-            this.ticket.productSelecc = 0;
-            this.ticket.itemSelecc = '';
-            this.ticket.totalPrice = 0;
+            if (confirm('¿CANCELAR está orden?')) {
+                this.ticket.productSelecc = 0;
+                this.ticket.itemSelecc = '';
+                this.ticket.totalPrice = 0;
+            }
         },
 
     },
@@ -117,5 +118,4 @@ li {
 .ticket {
     background-color: #e8f5e9;
 }
-
 </style>
