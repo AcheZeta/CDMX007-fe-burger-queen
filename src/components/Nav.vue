@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <header class="button-menu navSpace">
+        <header class="col s12 m12 s12 button-menu navSpace ">
             <a class="waves-effect waves-light btn-large black-text amber" @click="breakfastRoute">Nuevo Pedido</a>
             <a class="waves-effect waves-light btn-large black-text lime darken-1" @click="ticketRoute">Historial</a>
             <a class="waves-effect waves-light btn-large black-text purple accent-4" @click="menuRoute">Menú</a>
@@ -35,7 +35,7 @@ export default {
     background-color: #e8f5e9;
 }
 
- header {
+header {
     margin-bottom: 2%;
-}   
+}
 </style>
