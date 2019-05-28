@@ -4,20 +4,21 @@
             <div class="col s12">
                 <h5>Nuevo Pedido</h5>
             </div>
-
+    
             <div class="col s6">
                 <div class="col s6" v-for="product in itemMenu">
                     <a class="waves-effect waves-light btn green lighten-1" @click="addItem(product.item, product.price, product.schedule)">
-                                            {{ product.item }} ${{ product.price }}</a></br>
+                                                        {{ product.item }} ${{ product.price }}</a></br>
                     </br>
                 </div>
             </div>
     
             <div class="col s6">
                 <div>
+                    <b>Fecha:</b> {{ ticket.timeStamp }}
                     <input aria-label="clientName" type="text" placeholder="Cliente" v-model="ticket.clientName" class="form-control">
                     <div v-model="ticket">
-                        <b>Cliente:</b> {{ ticket.clientName }}
+                        </br> <b>Cliente:</b> {{ ticket.clientName }}
                         </br> <b>Cantidad:</b> {{ ticket.productSelecc }}
                         </br> <b>Item seleccionados:</b> {{ ticket.itemSelecc }}
                         </br> <b>Total:</b> ${{ ticket.totalPrice }}
@@ -43,8 +44,8 @@ export default {
                 clientName: null,
                 productSelecc: 0,
                 itemSelecc: '',
-                idButton: '',
                 totalPrice: 0,
+                timeStamp: Date(),
             },
         };
     },
@@ -58,10 +59,10 @@ export default {
                 });
             });
         },
-        addItem(product, price, schedule) {
+        addItem(product, price, schedule, timeStamp) {
             this.ticket.itemSelecc += '  ' + product
             this.ticket.productSelecc++
-                this.ticket.totalPrice += parseInt(price)
+            this.ticket.totalPrice += parseInt(price)
         },
         saveTicket() {
             db.collection("ticket").add(this.ticket)
@@ -82,9 +83,6 @@ export default {
             this.ticket.totalPrice = 0;
         },
 
-        toast() {
-            M.toast({ html: 'I am a toast!' })
-        }
     },
     created() {
         this.readData()
