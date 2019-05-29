@@ -1,6 +1,7 @@
 # Burger Queen 👑🍔
 
 **Burger Queen** es el primer proyecto donde usamos framework en el bootcamp, es un primer acercamiento y representa también una nueva curva de aprendizaje, para este proyecto elegí [Vue](https://vuejs.org/), un framework progresivo para construir interfaces de usuario, diseñado desde el inicio para ser adoptado incrementalmente. La biblioteca principal se enfoca solo en la capa de la vista, y es muy simple de utilizar e integrar con otros proyectos o bibliotecas existentes. Por otro lado, Vue también es perfectamente capaz de soportar aplicaciones sofisticadas de una sola página (Single-page-application o SPA) cuando se utiliza en combinación con herramientas modernas y librerías compatibles. [Conocer más de Vue](https://es-vuejs.github.io/vuejs.org/v2/guide/). 
+[DEMO](https://docs.google.com/presentation/d/1Qw6K-T-G1X8vaPaB8UJ0B1xDUh5DJ0ASsyYPXZe45tQ/edit?usp=sharing)
 
 ## Sobre el proyecto
 
